@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ashline Labs | druk 3D, projekty i części do aut</title>
+<meta name="description" content="Ashline Labs (dawniej PMD Precision): projekty i druk 3D, adaptery do baterii elektronarzędzi, części do aut. 3D design and printing, power tool battery adapters, car parts.">
+<meta property="og:title" content="Ashline Labs">
+<meta property="og:description" content="Projekty i druk 3D, części do aut i narzędzi. 3D design and printing for cars and tools.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ashlinelabs.com">
+<link rel="canonical" href="https://ashlinelabs.com">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23151517'/%3E%3Cpath d='M14 48 28 14h8l14 34h-9l-3-8H26l-3 8z M30 33h6l-3-8z' fill='%23fff'/%3E%3Cpath d='M40 14h6L33 48h-6z' fill='%23f26a1b'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #f6f6f4;
+    --ink: #151517;
+    --muted: #5d5f66;
+    --line: #dcdcd8;
+    --card: #ffffff;
+    --accent: #f26a1b;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .wrap { width: 100%; max-width: 560px; margin: 0 auto; padding: 0 16px; }
+  .topbar { display: flex; justify-content: flex-end; padding-top: 14px; }
+  .lang { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; background: var(--card); }
+  .lang button {
+    border: 0; background: transparent; color: var(--muted);
+    font: inherit; font-size: 13px; font-weight: 600;
+    padding: 6px 14px; cursor: pointer; letter-spacing: .04em;
+  }
+  .lang button[aria-pressed="true"] { background: var(--ink); color: #fff; }
+  header { text-align: center; padding: 36px 0 8px; }
+  .logo { width: min(86%, 340px); height: auto; display: block; margin: 0 auto; }
+  .tagline { margin: 22px auto 0; max-width: 440px; color: var(--muted); font-size: 16px; }
+  .former { margin-top: 10px; font-size: 13px; color: var(--muted); }
+  .former b { color: var(--ink); font-weight: 600; }
+  h2 {
+    font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--muted); margin: 34px 0 12px; font-weight: 700;
+  }
+  .links { display: grid; gap: 10px; padding: 0; margin: 0; list-style: none; }
+  .links a {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 12px; text-decoration: none; color: var(--ink);
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 12px; padding: 15px 16px; font-weight: 600;
+    transition: border-color .15s, transform .15s;
+  }
+  .links a:hover, .links a:focus-visible { border-color: var(--accent); transform: translateY(-1px); outline: none; }
+  .links small { display: block; font-weight: 400; color: var(--muted); font-size: 13px; margin-top: 1px; }
+  .links .arrow { color: var(--accent); font-size: 18px; flex: none; }
+  .contact {
+    background: var(--ink); color: #fff; border-radius: 14px;
+    padding: 20px 18px; text-align: center;
+  }
+  .contact p { margin: 0 0 10px; color: #c9cacf; font-size: 14px; }
+  .contact a {
+    color: #fff; font-size: 19px; font-weight: 700; text-decoration: none;
+    border-bottom: 2px solid var(--accent); padding-bottom: 1px; word-break: break-all;
+  }
+  footer { margin-top: auto; padding: 36px 0 28px; text-align: center; color: var(--muted); font-size: 13px; }
+  [data-l] { display: none; }
+  html[lang="pl"] [data-l="pl"], html[lang="en"] [data-l="en"] { display: revert; }
+  html[lang="pl"] span[data-l="pl"], html[lang="en"] span[data-l="en"] { display: inline; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <div class="lang" role="group" aria-label="Language / Język">
+      <button type="button" data-set="pl" aria-pressed="true">PL</button>
+      <button type="button" data-set="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+
+  <header>
+    <svg class="logo" viewBox="0 0 520 170" role="img" aria-label="Ashline Labs" xmlns="http://www.w3.org/2000/svg">
+      <g transform="skewX(-10)">
+        <text x="40" y="92" font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="82" letter-spacing="2" fill="#151517">ASHLINE</text>
+      </g>
+      <polygon points="92,36 108,36 82,98 66,98" fill="#f26a1b" opacity=".95"/>
+      <polygon points="214,36 228,36 206,98 192,98" fill="#f26a1b" opacity=".95"/>
+      <g stroke="#6b6e76" stroke-width="2" fill="none">
+        <path d="M188 120h-12v34h12"/>
+        <path d="M332 120h12v34h-12"/>
+      </g>
+      <text x="260" y="148" text-anchor="middle" font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="30" letter-spacing="7" fill="#151517">LABS</text>
+    </svg>
+    <p class="tagline">
+      <span data-l="pl">Projektuję i drukuję w 3D części do aut i narzędzi: adaptery do baterii elektronarzędzi, uchwyty i elementy dla motorsportu.</span>
+      <span data-l="en">I design and 3D print parts for cars and tools: power tool battery adapters, mounts and motorsport components.</span>
+    </p>
+    <p class="former">
+      <span data-l="pl">Dawniej <b>PMD Precision</b></span>
+      <span data-l="en">Formerly <b>PMD Precision</b></span>
+    </p>
+  </header>
+
+  <main>
+    <h2><span data-l="pl">Modele i sklepy</span><span data-l="en">Models &amp; shops</span></h2>
+    <ul class="links">
+      <li><a href="https://cults3d.com/@ashlinelabs" target="_blank" rel="noopener"><span>Cults3D<small data-l="pl">Modele 3D do pobrania i druku</small><small data-l="en">3D models to download and print</small></span><span class="arrow">→</span></a></li>
+      <li><a href="https://www.printables.com/@ashlinelabs_5245394" target="_blank" rel="noopener"><span>Printables<small data-l="pl">Darmowe i płatne projekty</small><small data-l="en">Free and paid designs</small></span><span class="arrow">→</span></a></li>
+    </ul>
+
+    <h2><span data-l="pl">Filmy i social media</span><span data-l="en">Videos &amp; social</span></h2>
+    <ul class="links">
+      <li><a href="https://www.youtube.com/@ashlinelabs" target="_blank" rel="noopener"><span>YouTube<small data-l="pl">Projekty, testy i druk w akcji</small><small data-l="en">Builds, tests and printing in action</small></span><span class="arrow">→</span></a></li>
+      <li><a href="https://www.tiktok.com/@ashlinelabs" target="_blank" rel="noopener"><span>TikTok<small data-l="pl">Krótkie filmy z warsztatu</small><small data-l="en">Short clips from the workshop</small></span><span class="arrow">→</span></a></li>
+      <li><a href="https://www.facebook.com/ashlinelabs" target="_blank" rel="noopener"><span>Facebook<small data-l="pl">Nowości i kontakt</small><small data-l="en">News and messages</small></span><span class="arrow">→</span></a></li>
+    </ul>
+
+    <h2><span data-l="pl">Kontakt</span><span data-l="en">Contact</span></h2>
+    <div class="contact">
+      <p><span data-l="pl">Pytania, zamówienia, współpraca</span><span data-l="en">Questions, orders, collaboration</span></p>
+      <a href="mailto:info@ashlinelabs.com">info@ashlinelabs.com</a>
+    </div>
+  </main>
+
+  <footer>© <span id="y">2026</span> Ashline Labs</footer>
+</div>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var buttons = document.querySelectorAll('.lang button');
+  function setLang(l) {
+    root.lang = l;
+    buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.set === l)); });
+    try { localStorage.setItem('lang', l); } catch (e) {}
+  }
+  var saved = null;
+  try { saved = localStorage.getItem('lang'); } catch (e) {}
+  var guess = (navigator.language || 'pl').toLowerCase().indexOf('pl') === 0 ? 'pl' : 'en';
+  setLang(saved === 'pl' || saved === 'en' ? saved : guess);
+  buttons.forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.set); }); });
+  document.getElementById('y').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
