@@ -59,7 +59,7 @@
     transition: border-color .15s, transform .15s;
   }
   .links a:hover, .links a:focus-visible { border-color: var(--accent); transform: translateY(-1px); outline: none; }
-  .links small { display: block; font-weight: 400; color: var(--muted); font-size: 13px; margin-top: 1px; }
+  .links small { font-weight: 400; color: var(--muted); font-size: 13px; margin-top: 1px; }
   .links .arrow { color: var(--accent); font-size: 18px; flex: none; }
   .contact {
     background: var(--ink); color: #fff; border-radius: 14px;
@@ -71,9 +71,9 @@
     border-bottom: 2px solid var(--accent); padding-bottom: 1px; word-break: break-all;
   }
   footer { margin-top: auto; padding: 36px 0 28px; text-align: center; color: var(--muted); font-size: 13px; }
-  [data-l] { display: none; }
-  html[lang="pl"] [data-l="pl"], html[lang="en"] [data-l="en"] { display: revert; }
-  html[lang="pl"] span[data-l="pl"], html[lang="en"] span[data-l="en"] { display: inline; }
+  [data-l] { display: none !important; }
+  html[lang="pl"] [data-l="pl"], html[lang="en"] [data-l="en"] { display: inline !important; }
+  html[lang="pl"] small[data-l="pl"], html[lang="en"] small[data-l="en"] { display: block !important; }
 </style>
 </head>
 <body>
@@ -86,7 +86,18 @@
   </div>
 
   <header>
-<img class="logo" src="logo.png" alt="Ashline Labs">
+    <svg class="logo" viewBox="0 0 520 170" role="img" aria-label="Ashline Labs" xmlns="http://www.w3.org/2000/svg">
+      <g transform="skewX(-10)">
+        <text x="40" y="92" font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="82" letter-spacing="2" fill="#151517">ASHLINE</text>
+      </g>
+      <polygon points="92,36 108,36 82,98 66,98" fill="#f26a1b" opacity=".95"/>
+      <polygon points="214,36 228,36 206,98 192,98" fill="#f26a1b" opacity=".95"/>
+      <g stroke="#6b6e76" stroke-width="2" fill="none">
+        <path d="M188 120h-12v34h12"/>
+        <path d="M332 120h12v34h-12"/>
+      </g>
+      <text x="260" y="148" text-anchor="middle" font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="30" letter-spacing="7" fill="#151517">LABS</text>
+    </svg>
     <p class="tagline">
       <span data-l="pl">Projektuję i drukuję w 3D części do aut i narzędzi: adaptery do baterii elektronarzędzi, uchwyty i elementy dla motorsportu.</span>
       <span data-l="en">I design and 3D print parts for cars and tools: power tool battery adapters, mounts and motorsport components.</span>
