@@ -11,7 +11,7 @@
 <!-- Open Graph / Social Media (Facebook, Messenger, LinkedIn, WhatsApp) -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ashlinelabs.com/">
-<meta property="og:title" content="Ashline Labs | 3D Printing & Custom Parts">
+<meta property="og:title" content="Ashline Labs | Druk 3D, projekty i części do aut">
 <meta property="og:description" content="3D Printing Engineering: Custom solutions for motorsports and workshops. Adaptery baterii, projekty CAD i druk 3D.">
 <meta property="og:image" content="https://ashlinelabs.com/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -20,7 +20,7 @@
 <!-- Podgląd dla Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://ashlinelabs.com/">
-<meta name="twitter:title" content="Ashline Labs | 3D Printing & Custom Parts">
+<meta name="twitter:title" content="Ashline Labs | Druk 3D, projekty i części do aut">
 <meta name="twitter:description" content="3D Printing Engineering: Custom solutions for motorsports and workshops. Adaptery baterii, projekty CAD i druk 3D.">
 <meta name="twitter:image" content="https://ashlinelabs.com/og-image.png">
 
@@ -70,7 +70,8 @@
   .lang button:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
 
   header { text-align: center; padding: 32px 0 8px; }
-  .logo { width: min(90%, 360px); height: auto; display: block; margin: 0 auto; }
+  .logo-box { max-width: 320px; margin: 0 auto; }
+  .logo-box img { width: 100%; height: auto; display: block; }
   .tagline { margin: 20px auto 0; max-width: 450px; color: var(--muted); font-size: 16px; }
   .former { margin-top: 10px; font-size: 13px; color: var(--muted); }
   .former b { color: var(--ink); font-weight: 600; }
@@ -166,13 +167,12 @@
     </div>
   </div>
 
-<header>
+  <header>
     <div class="logo-box">
-      <!-- Jeśli masz plik logo.png lub logo.svg w folderze ze stroną: -->
       <img src="logo.png" alt="Ashline Labs" width="320" height="100" class="logo">
     </div>
     <p class="tagline">
-      <span data-l="pl">Inżynieria druku 3D: Dedykowane rozwiązania dla motorsportu i warsztatu. </span>
+      <span data-l="pl">Inżynieria druku 3D: Dedykowane rozwiązania dla motorsportu i warsztatu.</span>
       <span data-l="en">3D Printing Engineering: Custom solutions for motorsports and workshops.</span>
     </p>
     <p class="former">
@@ -216,6 +216,9 @@
   var root = document.documentElement;
   var buttons = document.querySelectorAll('.lang button');
   var metaDesc = document.querySelector('meta[name="description"]');
+  var ogTitle = document.querySelector('meta[property="og:title"]');
+  var ogDesc = document.querySelector('meta[property="og:description"]');
+
   var titles = {
     pl: 'Ashline Labs | Druk 3D, projekty i części do aut',
     en: 'Ashline Labs | 3D Printing, Designs & Car Parts'
@@ -229,6 +232,8 @@
     root.lang = l;
     document.title = titles[l] || titles.pl;
     if (metaDesc) metaDesc.setAttribute('content', descriptions[l] || descriptions.pl);
+    if (ogTitle) ogTitle.setAttribute('content', titles[l] || titles.pl);
+    if (ogDesc) ogDesc.setAttribute('content', descriptions[l] || descriptions.pl);
     buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.set === l)); });
     try { localStorage.setItem('lang', l); } catch (e) {}
   }
